@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tic - Tac</title>
+</head>
+<body class="appBody initApp">
+    <div class="app  flex-col h-screen flex justify-evenly items-center">
+        <div class ="flex justify-between  items-center">
+            <h1 class="text-4xl text-pink-100 font-bold"><span class="text-red-200 uppercase">StevoLala</span> Tic - Tac Game</h1>
+                <!-- <i class="material-icons absolute settings">settings</i>  -->
+                <audio src="./audio/sounds.mp3" loop  class="song"></audio>
+        </div>
+        <div>
+            <div class="bg-black bg-opacity-40 shadow-xl rounded-md w-48 p-1">
+                <div class="flex myInput justify-around items-center mb-2">
+                    <label class="bg-blue-900 w-24 text-center text-white shadow-inner rounded p-1" for="fristPlayer">Frist Player</label>
+                    <select  class="bg-blue-900 firstpaer p-1 text-white rounded shadow-inner"  name="" id="fristPlayer">
+                        <option value="X">X</option>
+                        <option value="O">O</option>
+                        
+                    </select>
+                </div>
+                <div class ="grid gap-3">
+                    <button type="submit" class="text-white getenter bg-green-900 p-2 rounded-md">Start Game</button>
+                    <button type="submit"  class="text-white hidden bg-yellow-900 p-2 resetGame rounded-md">reset Game</button>
+                </div>
+                </div>
+        </div>
+        <div class="app-content  grid grid-cols-3 gap-1 rounded shadow-lg bg-white">
+            <div id="item-1" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-tl-md w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-2" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-3"  class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-tr-md w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-4" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-5" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div  id="item-6"class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-7" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-bl-md w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-8" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-9" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-br-md w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+        </div>
+        <div class="bg-black p-4 instruction text-white bg-opacity-50  rounded-lg ">
+            <p >How to Play</p>
+            <p>This game require two players</p>
+            <p>First Player selects game object</p>
+            <p>click the green button to start game</p>
+            <p>Game Scores is displayed in the Scored Board</p>
+            <p>Enjoy!!!</p>
+        </div>
+        <div class="congrat hidden">
+            <h1 class="text-green-400 font-bold text-5xl"><span class="winner text-white">X</span> Wins</h1>
+            <img src="./image/42a4271628718662d468929271b69421.gif" alt="">
+            <button type="submit" class="text-white  playagain bg-green-400 w-3/6 p-2 bg-opacity-70 text-2xl rounded-md">Play Again</button>
+
+        </div>
+        <div class="scoreBoard">
+            <h1 class="text-2xl text-red-800 font-bold text-center">Score Board</h1>
+                <div class="flex bg-purple-200 border-indigo-800 border justify-between p-1">
+                    <h1 class="text-blue-800 font-bold sm:text-md text-sm mr-6">First Player <span class="firstPlayer"></span>: <span class="firstplayerScore"></span></h1>
+                    <h1 class="text-red-800 font-bold sm:text-md text-sm">Second Player <span class="secondPlayer"></span>: <span class="secondplayerScore"></span></h1>
+                </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

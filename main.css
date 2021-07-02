@@ -1,0 +1,56 @@
+.appBody{
+    background: url('./image/game2.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: ease-out 0.5s all;
+    -webkit-transition: ease-out 0.5s all;
+    -moz-transition: ease-out 0.5s all;
+    -ms-transition: ease-out 0.5s all;
+    -o-transition: ease-out 0.5s all;
+}
+.initApp{
+    background: linear-gradient(90deg,#00000056,#00000059), url('./image/game2.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app{
+    width: 780px;
+    margin: auto;
+    max-width: 90%;
+} 
+
+.instruction{
+    box-shadow: inset #fff 2px -1px 20px 1px;
+}
+.instruction p{
+    text-shadow: rgba(20, 220, 120, 0.377) 1px -1px 1px;
+    text-align: center;
+}
+
+.app-content{
+    border:#00000031 inset 2px;
+}
+
+.congrat{
+    background: rgba(0, 0, 0, 0.719);
+    width:100% ;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.congrat img{
+    opacity: 0.9;
+    filter: invert();
+    -webkit-filter: invert();
+    border-radius:30px;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -ms-border-radius:30px;
+    -o-border-radius:30px;
+}
