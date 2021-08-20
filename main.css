@@ -1,3 +1,10 @@
+body{
+    overscroll-behavior-y: contain;
+    user-select: none;
+    font-family:-apply-system,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+
 .appBody{
     background: url('./image/game2.gif');
     background-repeat: no-repeat;
@@ -7,6 +14,7 @@
     -moz-transition: ease-out 0.5s all;
     -ms-transition: ease-out 0.5s all;
     -o-transition: ease-out 0.5s all;
+    margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left) !important;
 }
 .initApp{
     background: linear-gradient(90deg,#00000056,#00000059), url('./image/game2.gif');
@@ -54,3 +62,45 @@
     -ms-border-radius:30px;
     -o-border-radius:30px;
 }
+.gameEntries{
+    -webkit-tap-highlight-color: rgba(52, 155, 235, 0.377);
+}
+
+/* Desktop mini-mode*/
+@media screen and (max-width: 400px) {
+    .instruction {
+        font-size: small
+    }
+}
+
+/* @media (display-mode:standalone){
+
+} */
+
+
+@media (max-width:260px) {
+    .instruction {
+        display: none;
+    }
+    .gameheader h1 {
+        font-size: small; 
+        padding:0 0.4rem;
+    }
+    .app-content .gameEntries{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .control .getenter,.control .resetGame{
+        font-size: smaller;
+        /* width: fit-content; */
+        /* display: none; */
+    }
+    .app-content{
+        grid-gap: 0.5rem;
+    }
+    .scoreBoard h1{
+        font-size: 0.6rem;
+        /* display: none; */
+    }
+}
+

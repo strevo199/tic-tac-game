@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#C43BDE">
+    <link rel="manifest" href="app.webmanifest">
+    <meta-name="google" content="notranslate">
+    <meta  name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
+    
+
     <title>Tic - Tac</title>
 </head>
 <body class="appBody initApp">
     <div class="app  flex-col h-screen flex justify-evenly items-center">
-        <div class ="flex justify-between  items-center">
-            <h1 class="text-3xl sm:text-4xl bg-black bg-opacity-30 rounded-md  text-pink-400 font-bold"><span class="text-red-200 uppercase">StevoLala</span> Tic - Tac</h1>
+        <div class ="flex justify-between gameheader items-center">
+            <h1 class="text-2xl sm:text-4xl  bg-black bg-opacity-30 rounded-md  text-pink-400 font-bold"><span class="text-red-200 uppercase">StevoLala</span> Tic - Tac</h1>
                 <!-- <i class="material-icons absolute settings">settings</i>  -->
                 <audio src="./audio/sounds.mp3" loop  class="song"></audio>
         </div>
         <div>
-            <div class="bg-black bg-opacity-40 shadow-xl rounded-md w-48 p-1">
+            <div class="bg-black bg-opacity-40 shadow-xl rounded-md sm:w-48 p-1">
                 <div class="flex myInput justify-around items-center mb-2">
                     <label class="bg-blue-900 w-24 text-center text-white shadow-inner rounded p-1" for="fristPlayer">Frist Player</label>
                     <select  class="bg-blue-900 firstpaer p-1 text-white rounded shadow-inner"  name="" id="fristPlayer">
@@ -26,22 +33,22 @@
                         
                     </select>
                 </div>
-                <div class ="grid gap-3">
+                <div class ="grid gap-3 control">
                     <button type="submit" class="text-white getenter bg-green-900 p-2 rounded-md">Start Game</button>
                     <button type="submit"  class="text-white hidden bg-yellow-900 p-2 resetGame rounded-md">reset Game</button>
                 </div>
                 </div>
         </div>
         <div class="app-content  grid grid-cols-3 gap-1 rounded shadow-lg bg-white">
-            <div id="item-1" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-tl-md w-20 flex justify-center items-center text-white font-bold text-xl"></div>
-            <div id="item-2" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-20 flex justify-center items-center text-white font-bold text-xl"></div>
-            <div id="item-3"  class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-tr-md w-20 flex justify-center items-center text-white font-bold text-xl"></div>
-            <div id="item-4" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-20 flex justify-center items-center text-white font-bold text-xl"></div>
-            <div id="item-5" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-20 flex justify-center items-center text-white font-bold text-xl"></div>
-            <div  id="item-6"class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-20 flex justify-center items-center text-white font-bold text-xl"></div>
-            <div id="item-7" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-bl-md w-20 flex justify-center items-center text-white font-bold text-xl"></div>
-            <div id="item-8" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-20 flex justify-center items-center text-white font-bold text-xl"></div>
-            <div id="item-9" class="h-20 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-br-md w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-1" class="sm:h-20 h-16 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-tl-md w-16 sm:w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-2" class="sm:h-20 h-16 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-16 sm:w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-3"  class="sm:h-20 h-16 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-tr-md w-16 sm:w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-4" class="sm:h-20 h-16 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-16 sm:w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-5" class="sm:h-20 h-16 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-16 sm:w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div  id="item-6"class="sm:h-20 h-16 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-16 sm:w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-7" class="sm:h-20 h-16 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-bl-md w-16 sm:w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-8" class="sm:h-20 h-16 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 w-16 sm:w-20 flex justify-center items-center text-white font-bold text-xl"></div>
+            <div id="item-9" class="sm:h-20 h-16 gameEntries cursor-pointer bg-opacity-70 hover:bg-opacity-100 bg-blue-500 rounded-br-md w-16 sm:w-20 flex justify-center items-center text-white font-bold text-xl"></div>
         </div>
         <div class="bg-black p-4 instruction text-white bg-opacity-50  rounded-lg ">
             <p >How to Play</p>
@@ -66,4 +73,5 @@
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>

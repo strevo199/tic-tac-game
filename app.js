@@ -1,3 +1,16 @@
+let serviceworker = './sw.js'
+
+const checkForServiceworker = () =>{
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register(serviceworker)
+        .then(res =>console.log('service worker reg'))
+        .catch(err => console.log(err))
+    }
+}
+
+checkForServiceworker()
+
+
 class Game{
     constructor(current,firstplayer,secondplayer){
         this.cross = 'X';
@@ -13,7 +26,7 @@ class Game{
     }
 }
 
-
+ 
 
 const game = new Game()
 
@@ -102,7 +115,6 @@ class UI{
                myresult = true
            } 
            if (char.every(e => e === 'O')) {
-            console.log(char,myCur);
             myresult = true
            }
 
@@ -113,16 +125,13 @@ class UI{
         this.winnerAnalysis()
     }
 
+
     winnerAnalysis(){       
         if (game.result === true) {
             if (game.winningEntry === game.firstplayer) {
-                console.log('FirstPLayer Wins');
                 game.firstplayerScore++
-                console.log(game.firstplayerScore);
             }else {
-                console.log('secondary Wins');
                 game.secondplayerScore++
-                console.log(game.secondplayerScore);
             }
             this.uiSelector().appbox.style.borderColor= 'green'
             this.uiSelector().firstplayerScore.textContent = game.firstplayerScore
@@ -188,3 +197,5 @@ ui.uiSelector().playagain.addEventListener('click', e =>{
 ui.uiSelector().resetGame.addEventListener('click', e =>{
     ui.playAnotherAgain()
     });
+
+
