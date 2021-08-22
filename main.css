@@ -38,7 +38,10 @@ body{
 
 .app-content{
     border:#00000031 inset 2px;
+    width:fit-content; 
+    margin: auto
 }
+
 
 .congrat{
     background: rgba(0, 0, 0, 0.719);
@@ -104,3 +107,41 @@ body{
     }
 }
 
+@media screen and (max-height:370px) and (orientation: landscape) {
+    
+    .gamebody{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .scoreBoard >h1{
+        text-shadow: 1px 1px 1px #ffffffa6;
+        font-size: 2rem;
+    }
+    .scoreBoard div{
+        background: none;
+        border: none;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+    .scoreBoard div h1{
+        font-size: 1.2rem;
+        color: white;
+        text-shadow: 1px 1px 2px #000;
+
+    }
+
+    .scoreBoard{
+        display: flex; 
+        flex: 1;
+    }
+
+    .congrat{
+        margin-top: -28.5vh;
+        margin-left: -14.2vw;
+    }
+    
+}

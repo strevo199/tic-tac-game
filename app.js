@@ -7,7 +7,6 @@ const checkForServiceworker = () =>{
         .catch(err => console.log(err))
     }
 }
-
 checkForServiceworker()
 
 
@@ -15,14 +14,14 @@ class Game{
     constructor(current,firstplayer,secondplayer){
         this.cross = 'X';
         this.zero = 'O';
-        this.current = current
+        this.current = current;
         this.firstplayerScore = 0;
         this.secondplayerScore = 0;
         this.firstplayer = firstplayer;
         this.secondplayer = secondplayer;
         this.result = false;
-        this.winningEntry = ''
-        this.testwin = []
+        this.winningEntry = '';
+        this.testwin = [];
     }
 }
 
